@@ -1,4 +1,11 @@
 {
+    "eslint.validators": [
+        {
+            "language": "vue",
+            "autofix":true
+        }
+    ],
+    // "eslint.format.enable": true,
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": true 
     }
