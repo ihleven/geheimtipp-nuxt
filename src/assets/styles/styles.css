@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+.outline {
+    color: white;
+    text-shadow: -.5px -.5px 0 #000, .5px -.5px 0 #000, -.5px .5px 0 #000, .5px .5px 0 #000;
+    font-weight: 600;
+  }
+
+
+  .r {text-align:right;}
+  .c {text-align:center;}
+  .l {text-align:left;}
+
+  
+  html, body {
+      height:100vh;
+  }
+  body {
+    background: #e8e8e8; 
+  }

@@ -1,0 +1,68 @@
+
+@font-face {
+      font-family: "Baloo";
+      src: url("~assets/fonts/Baloo/Baloo-Regular.ttf");
+    }
+@font-face {
+      font-family: "TitanOne";
+      src: url("~assets/fonts/titan-one/TitanOne-Regular.ttf");
+    }
+    
+
+
+@font-face {
+    font-family: 'digitalstrip';
+    src: url('~assets/fonts/digistrip-webfont.woff');
+}
+
+
+
+
+
+@font-face {
+    font-family: 'Yanone Kaffeesatz';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Yanone Kaffeesatz Light'), local('YanoneKaffeesatz-Light'), url('~assets/fonts/yanone-kaffeesatz-light.woff') format('woff');
+}
+@font-face {
+    font-family: 'Yanone Kaffeesatz';
+    font-style: normal;
+    font-weight: 200;
+    src: local('Yanone Kaffeesatz Thin'), local('YanoneKaffeesatz-Thin'), 
+    url('~assets/fonts/yanone-kaffeesatz-thin.woff') format('woff');
+}
+@font-face {
+    font-family: 'Yanone Kaffeesatz';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Yanone Kaffeesatz Regular'), local('YanoneKaffeesatz-Regular'), url('~assets/fonts/yanone-kaffeesatz-regular.woff') format('woff');
+}
+.yanone  {
+    font-family: 'Yanone Kaffeesatz'; font-weight: 200;
+}
+
+.digistrip  {
+    font-family: 'digitalstrip'; font-size: 141%;
+}
+
+.digistrip-sm  {
+    font-family: 'digitalstrip';
+}
+
+
+.knewave {
+    font-family: 'Knewave', cursive;
+}
+.bangers {
+    font-family: 'Bangers', cursive;
+}
+.bevan {
+    font-family: 'Knewave', cursive;
+}
+.cabin-sketch {
+    font-family: 'Bangers', cursive;
+}
+.bevan {
+    font-family: 'Bevan', cursive;
+}
