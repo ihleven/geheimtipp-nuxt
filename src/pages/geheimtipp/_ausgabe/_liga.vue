@@ -29,10 +29,10 @@
 <script>
 import axios from 'axios'
 export default {
-    props: {
-        // eslint-disable-next-line vue/require-default-prop
-        ausgabe: Object,
-    },
+    // props: {
+    //     // eslint-disable-next-line vue/require-default-prop
+    //     ausgabe: Object,
+    // },
     // https://ihleven.de/api/v1/compseasons/12020
     async fetch() {
         const liga = this.$route.params.liga.replace(/BL/g, '')
@@ -62,7 +62,11 @@ export default {
             activeRound: null,
         }
     },
-    computed: {},
+    computed: {
+        ausgabe() {
+            return this.$store.state.ausgabe.ausgabe
+        },
+    },
     mounted() {
         console.log('LeagueSeasonComponent => compSeason:', this.rounds)
         console.log('LigaComponent: compseason', this.compseason, this.ausgabe)

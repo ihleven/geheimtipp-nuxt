@@ -35,6 +35,7 @@
 
 <script>
 import axios from 'axios'
+// import { mapMutations } from 'vuex'
 
 export default {
     layout: 'default',
@@ -56,7 +57,8 @@ export default {
                         'Content-Type': 'application/json',
                     },
                 })
-                console.log('response:', response)
+                this.$store.commit('auth/setLoginData', response.data)
+                this.$router.push('/geheimtipp')
             } catch (err) {
                 console.log('$auth.loginWich ERROR', err)
             }

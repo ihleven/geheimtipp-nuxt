@@ -23,7 +23,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="dropdown">
+                <div v-if="auth.account" class="dropdown">
                     <button
                         id="authMenu"
                         type="button"
@@ -33,7 +33,7 @@
                         aria-expanded="false"
                         style="border-color: transparent;"
                     >
-                        <i class="fa fa-fw" :class="auth.account ? 'fa-user-o' : 'fa-user-secret'"></i>u: {{ auth.account.username }}
+                        <i class="fa fa-fw" :class="auth.account ? 'fa-user-o' : 'fa-user-secret'"></i>{{ auth.account.username }}
                         <i class="fa fa-angle-down"></i>
                     </button>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="authMenu">
@@ -54,6 +54,9 @@
                             Logout
                         </button>
                     </div>
+                    <n-link to="/">
+                        home
+                    </n-link>
                 </div>
             </nav>
         </div>
@@ -149,13 +152,21 @@ export default {
         return {
             subtitle: 'Bundesliga 2018/19',
             ausgaben: ['WM2018', '2014'],
-            auth: {
-                account: {
-                    first_name: 'ih',
-                    last_name: 'leven',
-                },
-            },
+            // auth: {
+            //     account: {
+            //         first_name: 'ih',
+            //         last_name: 'leven',
+            //     },
+            // },
         }
+    },
+    computed: {
+        auth() {
+            return this.$store.state.auth
+        },
+    },
+    mounted() {
+        this.$store.commit('auth/loadAuth')
     },
     methods: {
         logout() {

@@ -53,7 +53,7 @@
         </nav>
 
         <section class="content">
-            <nuxt-child :ausgabe="ausgabe" />
+            <nuxt-child />
         </section>
     </div>
 </template>
@@ -71,6 +71,7 @@ export default {
             },
         })
         this.ausgabe = response.data
+        this.$store.commit('ausgabe/setAusgabe', this.ausgabe)
         console.log('ausgabe:', this.ausgabe)
     },
     fetchOnServer: false,
