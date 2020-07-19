@@ -9,13 +9,15 @@ export const actions = {
 }
 
 function parseCookie(cookies) {
-    const cookie = cookies.split(';').find((value) => value.includes('geheimtipp-token'))
+    if (cookies) {
+        const cookie = cookies.split(';').find((value) => value.includes('geheimtipp-token'))
 
-    if (cookie) {
-        const token = cookie.split('=')[1]
-        if (token !== null) {
-            return token
+        if (cookie) {
+            const token = cookie.split('=')[1]
+            if (token !== null) {
+                return token
+            }
+            return null
         }
-        return null
     }
 }
